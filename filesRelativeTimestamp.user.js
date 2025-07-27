@@ -2,7 +2,7 @@
 // @name        Show files relative timestamp
 // @namespace   https://ultraservers.com
 // @match       https://panel.ultraservers.com/server/*/files*
-// @downloadURL
+// @downloadURL https://github.com/UltraMortis/random-ultra-stuff/raw/refs/heads/main/filesRelativeTimestamp.user.js
 // @grant       none
 // @version     1.0
 // @author      Mortis
