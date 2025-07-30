@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         UltraServers Schedule cron enhancement
 // @namespace    https://ultraservers.com
-// @version      1.3
+// @version      1.4
 // @author       Mortis
 // @downloadURL  https://github.com/UltraMortis/random-ultra-stuff/raw/refs/heads/main/scheduleCronEnhancement.user.js
 // @description  Generate Crons in with the power of AI
@@ -90,12 +90,14 @@
     const cheatsheetBtn = [...modal.querySelectorAll('button')].find(btn =>
       btn.textContent.includes('Show CRON Cheatsheet')
     );
+    // We want this to be above the cheatsheet button
     const insertTarget = cheatsheetBtn?.closest('.floating-content');
     if (!insertTarget) {
       console.warn('Insert target not found');
       return;
     }
 
+    // Figure out the offset of the user's timezone from UTC. The AI will take user's timezone offset and their desired input to create a UTC cron schedule
     const offsetMinutes = -new Date().getTimezoneOffset();
     const sign = offsetMinutes >= 0 ? '+' : '-';
     const absMinutes = Math.abs(offsetMinutes);
@@ -103,6 +105,7 @@
     const minutes = String(absMinutes % 60).padStart(2, '0');
     const timezoneOffset = `${sign}${hours}:${minutes}`;
 
+    // Creating the UI for this to work
     const aiBox = document.createElement('div');
     aiBox.id = 'ai-cron-box';
     aiBox.className = 'mt-6 mb-8 p-4 bg-elevation-1 border border-blend-brd_mute rounded-lg text-sm';
