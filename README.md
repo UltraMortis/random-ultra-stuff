@@ -25,6 +25,19 @@ To use these userscripts, install a userscript manager browser extension:
 
 ## 📜 Available Scripts
 
+
+
+### 🤖 AI-powered CRON Schedule Helper
+
+Helps you create CRON schedules easily with AI, including automatic timezone adjustments so you don’t have to calculate offsets manually.
+
+> [!WARNING]
+> The script relies on an API. If you're not comfortable with that, then skip the usage of this script. The API, which I created, simply processes an input and your timezone offset. 
+
+**🔗 [Install Script](https://github.com/UltraMortis/random-ultra-stuff/raw/refs/heads/main/scheduleCronEnhancement.user.js)**
+
+---
+
 ### 🕓 Show files relative timestamp  
 Adds relative timestamps (e.g. `3 hours ago`) next to "Last Modified" in your server's file manager.
 
