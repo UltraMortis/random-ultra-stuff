@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         UltraServers Schedule cron enhancement
 // @namespace    https://ultraservers.com
-// @version      1.4
+// @version      1.5
 // @author       Mortis
 // @downloadURL  https://github.com/UltraMortis/random-ultra-stuff/raw/refs/heads/main/scheduleCronEnhancement.user.js
 // @description  Generate Crons in with the power of AI
@@ -152,8 +152,8 @@
         data: JSON.stringify({ input, timezone_offset: timezoneOffset }),
         onload(res) {
           // Enable the button when the request is done
-          btn.disabled = false;
-          btn.textContent = 'Generate';
+          genButton.disabled = false;
+          genButton.textContent = 'Generate';
 
           // We expect the data to just be a JSON object with the cron fields value
           let data;
@@ -187,8 +187,8 @@
         },
         // Error handling
         onerror(e) {
-          btn.disabled = false;
-          btn.textContent = 'Generate';
+          genButton.disabled = false;
+          genButton.textContent = 'Generate';
           console.error(e);
           showToast(`Request failed: ${e.message}`, 'error');
         },
