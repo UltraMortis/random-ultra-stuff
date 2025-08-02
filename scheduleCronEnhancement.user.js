@@ -4,7 +4,7 @@
 // @version      1.6
 // @author       Mortis
 // @downloadURL  https://github.com/UltraMortis/random-ultra-stuff/raw/refs/heads/main/scheduleCronEnhancement.user.js
-// @description  Generate Crons in with the power of AI
+// @description  Generate Crons with the power of AI
 // @match        https://panel.ultraservers.com/server*
 // @grant        GM_xmlhttpRequest
 // @connect      ultraservers-cron-1060219763051.us-central1.run.app
@@ -47,7 +47,7 @@
       toast.style.transform = 'translateY(0)';
     });
 
-    // Lets you click to close the toast
+    // Lets you click to close the Toast
     toast.addEventListener('click', () => toast.remove());
 
     // Close the toast after 5 seconds
