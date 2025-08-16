@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         Pterodactyl Backup Copy URL Button
 // @namespace    https://ultraservers.com
-// @version      1.1
+// @version      1.2
 // @author       Mortis
 // @downloadURL https://github.com/UltraMortis/random-ultra-stuff/raw/refs/heads/main/copyBackupURL.user.js
 // @description  Add a 'Copy URL' button to each backup on the UltraServers backup panel for those that want to use their preferred downloader
-// @match        https://panel.ultraservers.com/server/*
+// @match        https://panel.ultraservers.com/server*
 // @grant        GM_setClipboard
 // @grant        GM_xmlhttpRequest
 // ==/UserScript==
